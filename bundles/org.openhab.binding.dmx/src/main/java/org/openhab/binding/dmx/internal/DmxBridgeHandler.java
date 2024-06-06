@@ -58,7 +58,13 @@ public abstract class DmxBridgeHandler extends BaseBridgeHandler {
 
     private @Nullable ScheduledFuture<?> senderJob;
     private boolean isMuted = false;
+
     private int refreshTime = 1000 / DEFAULT_REFRESH_RATE;
+
+    // Getter method for refreshTime
+    public int getRefreshTime() {
+        return refreshTime;
+    }
 
     protected DmxBridgeHandler(Bridge dmxBridge) {
         super(dmxBridge);

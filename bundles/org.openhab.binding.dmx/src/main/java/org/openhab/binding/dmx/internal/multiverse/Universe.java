@@ -178,6 +178,8 @@ public class Universe {
      *
      * @param time the timestamp used for calculation
      */
+
+    // This function here desyncs
     public void calculateBuffer(long time) {
         universeLock.lock();
         try {

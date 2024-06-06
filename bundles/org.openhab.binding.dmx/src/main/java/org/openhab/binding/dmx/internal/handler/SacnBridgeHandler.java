@@ -64,6 +64,8 @@ public class SacnBridgeHandler extends DmxOverEthernetHandler {
         }
         packetTemplate.setUniverse(universe.getUniverseId());
 
+        logger.info("CHRIS: using universe {} please work update as well", configuration.universe);
+
         receiverNodes.clear();
         if (("unicast".equals(configuration.mode))) {
             if (configuration.address.isEmpty()) {

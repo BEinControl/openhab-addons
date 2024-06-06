@@ -12,7 +12,8 @@
  */
 package org.openhab.binding.dmx.internal.handler;
 
-import static org.openhab.binding.dmx.internal.DmxBindingConstants.*;
+import static org.openhab.binding.dmx.internal.DmxBindingConstants.CHANNEL_BRIGHTNESS;
+import static org.openhab.binding.dmx.internal.DmxBindingConstants.THING_TYPE_DIMMER;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -148,6 +149,9 @@ public class DimmerThingHandler extends DmxThingHandler {
                 return;
             }
         }
+
+        // Remove this after test
+        logger.info("This info isn't very useful");
 
         DimmerThingHandlerConfiguration configuration = getConfig().as(DimmerThingHandlerConfiguration.class);
 
